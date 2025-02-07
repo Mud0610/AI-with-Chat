@@ -5,7 +5,25 @@ backend/.env
 frontend/node_modules
 frontend/dist
 frontend/.env
+# MERN Stack
 
+# Backend dependencies
+/backend/node_modules
+
+# Backend build output
+/backend/dist
+
+# Backend environment variables
+/backend/.env
+
+# Frontend dependencies
+/frontend/node_modules
+
+# Frontend build output
+/frontend/dist
+
+# Frontend environment variables
+/frontend/.env
 # Logs
 logs
 *.log
