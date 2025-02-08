@@ -3,8 +3,9 @@ import { DB_NAME } from "../utils/constants.js";
 
 const connectDB = async () => {
   try {
+    const MONGO_URI = process.env.MONGO_URI.replace(/\/[^/]+(\?.*)?$/, ""); // Remove the last part of the URI
     const connectionInstance = await mongoose.connect(
-      `${process.env.MONGO_URI}/${DB_NAME}`
+      `${MONGO_URI}/${DB_NAME}`
     );
     console.log("MongoDB connected: ", connectionInstance.connection.host);
   } catch (error) {
